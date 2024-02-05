@@ -1,0 +1,172 @@
+.EditCar-title-div {
+    background-color: #333;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 1%;
+  }
+  
+  .EditCar-title {
+    margin: 0;
+  }
+  
+  .EditCar {
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .EditCar-Page {
+    width: 100%;
+    padding: 2%;
+    background-color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .EditCar-Form {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .EditCar-div-1,
+  .EditCar-div-2,
+  .EditCar-div-3,
+  .EditCar-div-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+  }
+  
+  .EditCar-div-Name,
+  .EditCar-div-Number,
+  .EditCar-div-Year,
+  .EditCar-div-Price,
+  .EditCar-div-Location,
+  .EditCar-div-Fuel,
+  .EditCar-div-Make,
+  .EditCar-div-Type,
+  .EditCar-div-Model,
+  .EditCar-div-img,
+  .EditCar-div-liststart,
+  .EditCar-div-listdrop {
+    width: 50%;
+    padding: 0.5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .EditCar-div-Year,
+  .EditCar-div-Price,
+  .EditCar-div-Location,
+  .EditCar-div {
+    width: 33.33%;
+  }
+  
+  .EditCar-div-btns {
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .EditCar-Back,
+  .EditCar-Submit {
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    height: fit-content;
+    margin-left: 2%;
+    padding: 1%;
+    transition: background-color 0.5s;
+  }
+  
+  .EditCar-Back {
+    background-color: #e74c3c;
+  }
+  .EditCar-Submit {
+    background-color: #27ae60;
+  }
+  .EditCar-Back:hover {
+    background-color: rgb(178, 43, 28);
+  }
+  .EditCar-Submit:hover {
+    background-color: #1d8649;
+  }
+  
+  .EditCar-Carno-label,
+  .EditCar-Name-label,
+  .EditCar-Fuel-label,
+  .EditCar-Model-label,
+  .EditCar-Type-label,
+  .EditCar-Make-label,
+  .EditCar-Price-label,
+  .EditCar-Location-label,
+  .EditCar-Year-label,
+  .EditCar-liststart-label,
+  .EditCar-listdrop-label {
+    text-align: start;
+    font-size: large;
+    font-weight: bold;
+    margin: 1%;
+  }
+  
+  .EditCar-Err {
+    color: red;
+    text-align: start;
+    margin: 1%;
+  }
+  .EditCar-Carno,
+  .EditCar-Name,
+  .EditCar-img,
+  .EditCar-Fuel,
+  .EditCar-Model,
+  .EditCar-Type,
+  .EditCar-Make,
+  .EditCar-Price,
+  .EditCar-Location,
+  .EditCar-Year,
+  .EditCar-liststart,
+  .EditCar-listdrop {
+    border: 2px solid #222;
+    border-radius: 2px;
+    outline: none;
+    outline-offset: none;
+    width: 75%;
+    padding: 2%;
+    margin-left: 1%;
+    font-size: medium;
+  }
+  .EditCar-liststart,
+  .EditCar-listdrop {
+    width: 50%;
+    padding: 1.5%;
+  }
+  .EditCar-Price,
+  .EditCar-Location,
+  .EditCar-Year {
+    width: 90%;
+    margin: 1%;
+  }
+  .EditCar-Fuel,
+  .EditCar-Model,
+  .EditCar-Make,
+  .EditCar-Type {
+    margin: 1%;
+  }
+  

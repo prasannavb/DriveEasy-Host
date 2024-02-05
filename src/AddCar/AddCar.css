@@ -1,0 +1,288 @@
+.AddCar {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: row;
+}
+.AddCar-Layout {
+  width: 85%;
+  max-height: 120vh;
+  overflow-y: scroll;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.AddCar-title-div {
+  border-radius: 5px 5px 0 0;
+  width: fit-content;
+  padding: 1%;
+}
+
+.AddCar-title {
+  margin: 0;
+  width: fit-content;
+  border-bottom: 5px solid darkblue;
+}
+
+.AddCar-Form {
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 100%;
+  height: fit-content;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.AddCar-div-Name,
+.AddCar-div-Number {
+  width: 50%;
+  padding: 0 2%;
+  display: flex;
+  flex-direction: column;
+}
+.AddCar-div-Name input,
+.AddCar-div-Number input {
+  border: 2px solid silver;
+  background-color: rgb(237, 233, 233);
+  border-radius: 2px;
+  outline: none;
+  outline-offset: none;
+  width: 100%;
+  padding: 2%;
+  margin: 2% 1%;
+  font-size: medium;
+}
+
+.AddCar-div-Name label,
+.AddCar-div-Number label {
+  font-weight: bold;
+  margin: 1%;
+}
+.AddCar-Err {
+  margin: 1%;
+  color: red;
+}
+
+.AddCar-div-1,
+.AddCar-div-2,
+.AddCar-div-3 {
+  width: 100%;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: row;
+}
+.AddCar-div-Year,
+.AddCar-div-Price,
+.AddCar-div-Location,
+.AddCar-div-Fuel,
+.AddCar-div-Make,
+.AddCar-div-Model,
+.AddCar-div-Type {
+  width: 50%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.AddCar-img,
+.AddCar-Fuel,
+.AddCar-Model,
+.AddCar-Make,
+.AddCar-Price,
+.AddCar-Location,
+.AddCar-Year,
+.AddCar-Type {
+  border: 2px solid silver;
+  background-color: rgb(237, 233, 233);
+  border-radius: 4px;
+  outline: none;
+  outline-offset: none;
+  width: 75%;
+  padding: 2%;
+  margin-left: 1%;
+  font-size: medium;
+}
+.AddCar-Price,
+.AddCar-Location,
+.AddCar-Year {
+  width: 90%;
+  margin: 1%;
+}
+.AddCar-Fuel,
+.AddCar-Model,
+.AddCar-Make,
+.AddCar-Type {
+  margin: 1%;
+}
+.AddCar-Fuel-label,
+.AddCar-Model-label,
+.AddCar-Make-label,
+.AddCar-Price-label,
+.AddCar-Location-label,
+.AddCar-Year-label,
+.AddCar-Type-label {
+  text-align: start;
+  font-weight: bold;
+  margin: 1%;
+}
+
+.AddCar-div-btns {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.AddCar-div-btns button,
+.AddLicense {
+  border: none;
+  border-radius: 2px;
+  padding: 1.5%;
+  width: 15%;
+  margin-top: 3%;
+  background-color: #e74c3c;
+  color: white;
+  transition: background-color 0.5s;
+}
+.AddLicense {
+  padding: 1%;
+  margin-top: 0;
+}
+.AddCar-div-btns button:hover,
+.AddLicense:hover {
+  cursor: pointer;
+  background-color: rgb(178, 43, 28);
+}
+.AddLicense-Layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AddLicense-div-1,
+.AddLicense-div-2 {
+  width: 100%;
+  margin: auto;
+  padding: 1% 2%;
+  display: flex;
+  flex-direction: column;
+}
+.AddLicense-div-2 {
+  display: flex;
+  flex-direction: row;
+}
+.AddLicense-div-2 div b {
+  margin-bottom: 4%;
+}
+
+.AddLicense-div-1 h1 {
+  width: fit-content;
+  margin: 0%;
+  border-bottom: 4px solid darkblue;
+}
+.AddLicense-CarImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2%;
+  border: 2px solid black;
+}
+
+.Xlsx-file-upload {
+  border-radius: 5px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  background: url('../Images/AddCarUploadFile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20vh;
+  width: 95%;
+  height: 40vh;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Xlsx-file-upload input[type="file"] {
+  width: 100%;
+  height: 55vh;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.Xlsx-file-btns {
+  text-align: center;
+  width: 50%;
+  padding: 2%;
+  margin-bottom: 3%;
+  cursor: pointer;
+}
+
+.xlsx,
+.xls {
+  background-color: #e9e5fd;
+  color: #3a2d7c;
+  padding: 2%;
+  border-radius: 5px;
+  margin-left: 2%;
+}
+
+.xls {
+  background: #fde5e5;
+  color: #c43c3c;
+}
+.AddLicense-PrimaryImg b {
+  margin-bottom: 2%;
+  font-size: large;
+}
+
+.AddLicense-PrimaryImg label,
+.AddLicense-BookImg label {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  width: fit-content;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+#file-chosen {
+  margin-left: 0.3rem;
+}
+
+.AddLicense-PrimaryImg,
+.AddLicense-BookImg {
+  padding: 2%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.AddLicense-SecondaryImg {
+  padding-left: 2%;
+}
+.AddLicense-SecondaryImg b {
+  font-size: large;
+}
+
+.AddLicense-BookImg {
+  width: 50%;
+}
+.AddLicense-BookImg b {
+  font-size: large;
+}
+.AddLicense-Err {
+  color: red;
+  margin: 2% 0 0 2%;
+}

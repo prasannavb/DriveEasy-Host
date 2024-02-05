@@ -1,0 +1,180 @@
+.ViewBookings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .ViewBookings-Page {
+    width: 80%;
+    max-height: 120vh;
+    overflow-y: scroll;
+  }
+  
+  .ViewBookings-Topbtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .ViewBookings-Topbtns button,
+  .ViewBookings-CarDetails-Cancelbtn {
+    border: none;
+    width: 15%;
+    transform: skew(-15deg);
+    color: white;
+    margin: 1% 0 1% 0;
+    padding: 1%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  .ViewBookings-CarDetails-Cancelbtn {
+    background-color: #e74c3c;
+    padding: 1.5%;
+    transform: skew(0deg);
+  }
+  .ViewBookings-CarDetails-Cancelbtn:hover {
+    background-color: rgb(178, 43, 28);
+  }
+  
+  .ViewBookings-Topbtns-Upcoming {
+    padding: 1%;
+    background-color: #007bff;
+  }
+  .ViewBookings-Topbtns-Upcoming:hover {
+    background-color: #0161c9;
+  }
+  
+  .ViewBookings-Topbtns-Active {
+    background-color: #27ae60;
+  }
+  .ViewBookings-Topbtns-Active:hover {
+    background-color: #1d8649;
+  }
+  .ViewBookings-Topbtns-Past {
+    background-color: #e74c3c;
+  }
+  .ViewBookings-Topbtns-Past:hover {
+    background-color: rgb(178, 43, 28);
+  }
+  
+  .ViewBookings-Card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  .ViewBookings-Verify {
+    background-color: white;
+    width: fit-content;
+    padding: 0.5% 2%;
+    margin-left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .ViewBookings-Verify b {
+    font-size: larger;
+  }
+  
+  .ViewBookings-Details {
+    margin: auto;
+    padding: 1.5% 0;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .ViewBookings-Img {
+    width: 40%;
+    height: auto;
+    padding-left: 0.5%;
+  }
+  .ViewBookings-CarImg {
+    width: 100%;
+    max-height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .ViewBookings-CarDetails {
+    width: 60%;
+    height: 100%;
+    margin-left: 1%;
+  }
+  .ViewBookings-CarDetails-Name {
+    width: fit-content;
+    padding: 0% 3%;
+  }
+  .ViewBookings-CarDetails-Name h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: larger;
+  }
+  
+  .ViewBookings-CarDetails-Type,
+  .ViewBookings-CarDetails-Primary,
+  .ViewBookings-CarDetails-Dates,
+  .ViewBookings-CarDetails-Price {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .ViewBookings-CarDetails-Type b,
+  .ViewBookings-CarDetails-Primary b,
+  .ViewBookings-CarDetails-Price b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .ViewBookings-CarDetails-Dates b {
+    width: 40%;
+  }
+  
+  .ViewBookings-CarDetails-Type span,
+  .ViewBookings-CarDetails-Primary span,
+  .ViewBookings-CarDetails-Dates span,
+  .ViewBookings-CarDetails-Price span {
+    font-weight: normal;
+    margin-left: 2px;
+  }
+  
+  .ViewBookings-CarDetails-Secondary {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .ViewBookings-CarDetails-btns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .ViewBookings-Empty {
+    width: 100%;
+    height: 85vh;
+    overflow-y: hidden;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ViewBookings-UserDetails-user {
+    padding-left: 2%;
+  }
+  
+  .ViewBookings-CancelModal {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .ViewBookings-CancelModal img {
+    width: 100%;
+    height: 45vh;
+  }
+  
+  .ViewBookings-CancelModal h2 {
+    margin: 0;
+  }
+  

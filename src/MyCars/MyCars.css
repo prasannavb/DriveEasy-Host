@@ -1,0 +1,302 @@
+.MyCars-Page {
+    display: flex;
+  }
+  .MyCars {
+    background-color: whitesmoke;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+  }
+  .MyCars-Review-layout {
+    background-color: whitesmoke;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .MyCars-CardDeck {
+    background-color: whitesmoke;
+    width: 100%;
+    max-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .MyCars-Topbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .MyCars-Topbtn button {
+    border: none;
+    width: 15%;
+    transform: skew(-15deg);
+    color: white;
+    margin: 1% 0 1% 0;
+    padding: 1%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .MyCars-Card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  .MyCars-Verify {
+    background-color: white;
+    width: fit-content;
+    padding: 0.5% 2%;
+    margin-left: 12.5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .MyCars-Verify b {
+    font-size: larger;
+  }
+  
+  .MyCars-Details {
+    margin: auto;
+    padding: 1.5% 0;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+  }
+  .MyCars-Img {
+    width: 40%;
+    height: auto;
+    padding-left: 0.5%;
+  }
+  .MyCars-CarImg {
+    width: 100%;
+    max-height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .MyCars-CarDetails {
+    width: 60%;
+    height: 100%;
+    margin-left: 1%;
+  }
+  .MyCars-CarDetails-Name {
+    width: fit-content;
+    padding: 0% 3%;
+  }
+  .MyCars-CarDetails-Name h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: larger;
+  }
+  
+  .MyCars-CarDetails-Type,
+  .MyCars-CarDetails-Primary,
+  .MyCars-CarDetails-Dates,
+  .MyCars-CarDetails-Price,
+  .MyCars-CarDetails-Ratings {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .MyCars-CarDetails-Type b,
+  .MyCars-CarDetails-Primary b,
+  .MyCars-CarDetails-Price b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .MyCars-CarDetails-Dates b {
+    width: 40%;
+  }
+  
+  .MyCars-CarDetails-Type span,
+  .MyCars-CarDetails-Primary span,
+  .MyCars-CarDetails-Dates span,
+  .MyCars-CarDetails-Price span {
+    font-weight: normal;
+    margin-left: 2px;
+  }
+  
+  .MyCars-CarDetails-Secondary {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .MyCars-CarDetails-btns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .MyCars-CarDetails-Deletebtn,
+  .MyCars-CarDetails-Editbtn,
+  .MyCars-Empty-AddCar,
+  .MyCars-CarDetails-Ratingbtn {
+    border: none;
+    border-radius: 3px;
+    width: 25%;
+    color: white;
+    margin: 0 4%;
+    padding: 2%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .MyCars-Empty-AddCar,
+  .MyCars-CarDetails-Ratingbtn {
+    padding: 1%;
+    background-color: #007bff;
+  }
+  .MyCars-Empty-AddCar:hover,
+  .MyCars-CarDetails-Ratingbtn:hover {
+    background-color: #0161c9;
+  }
+  
+  .MyCars-CarDetails-Editbtn,
+  #MyCars-Verified {
+    background-color: #27ae60;
+  }
+  .MyCars-CarDetails-Deletebtn,
+  #MyCars-UnVerified {
+    background-color: #e74c3c;
+  }
+  .MyCars-CarDetails-Deletebtn:hover,
+  #MyCars-UnVerified:hover {
+    background-color: rgb(178, 43, 28);
+  }
+  .MyCars-CarDetails-Editbtn:hover,
+  #MyCars-Verified:hover {
+    background-color: #1d8649;
+  }
+  
+  .MyCars-Empty {
+    width: 100%;
+    height: 120vh;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .MyCars-Review-header {
+    background-color: #333;
+    width: 100%;
+    padding: 1.5%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .MyCars-Review-header h2 {
+    margin: auto;
+  }
+  .MyCars-Review-header button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+  }
+  .MyCars-Review-header button:hover {
+    text-decoration: underline;
+  }
+  
+  .MyCars-Review-CardDeck {
+    width: 100%;
+    max-height: 109vh;
+    overflow-y: scroll;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .MyCars-Reviews-Card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .MyCars-Reviews-Card {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 1% 0 2% 2%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    transition: transform 0.5s;
+  }
+  
+  .MyCars-Review-Cards-div-1 {
+    width: 100%;
+    padding: 1% 0 0 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .MyCars-Review-Cards-div-1 p {
+    margin-left: 2%;
+  }
+  .MyCars-Review-Cards-div-1 b {
+    margin-left: 25%;
+    font-size: larger;
+  }
+  
+  .MyCars-Review-Cards-div-2 {
+    width: 100%;
+    padding: 2% 0% 2% 5%;
+  }
+  .MyCars-Review-Cards-div-3 {
+    width: 100%;
+    height: fit-content;
+    padding: 1%;
+  }
+  .MyCars-Review-Cards-div-3 p {
+    margin: 0;
+    padding: 2%;
+    width: 100%;
+    height: fit-content;
+  }
+  .MyCars-Review-Emptylayout {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .MyCars-Review-Empty {
+    margin: auto;
+  }
+  .Bookings-SingleReview-Cards {
+    width: 100%;
+    height: fit-content;
+  }
+  .Bookings-SingleReview-Cards h2 {
+    padding: 2%;
+    margin: 0%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Bookings-SingleReview-Cards-div-1,
+  .Bookings-SingleReview-Cards-div-2,
+  .Bookings-SingleReview-Cards-div-3 {
+    padding: 0% 0 2% 2%;
+  }
+  
+  .Bookings-SingleReview-Cards-div-1 {
+    padding-top: 0.5%;
+  }
+  

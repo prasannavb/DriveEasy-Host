@@ -96,15 +96,20 @@
   background-color: #333;
   color: white;
   border-radius: 25px;
-  width: 50%;
   height: fit-content;
-  padding: 2%;
+  padding:5%;
   margin-left: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: background-color 0.5s;
+  text-decoration: none;
+}
+.Dashboard-Table-board-btns a
+{
+  text-decoration: none;
+  padding: 2%;
 }
 .Dashboard-Table-board-btns button:hover {
   border: 2px solid green;

@@ -146,7 +146,7 @@
     flex-direction: column;
     padding: 2%;
   }
-  .Profile-LeftNav-btns button {
+  .Profile-LeftNav-btns button,.Profile-LeftNav-btns a {
     background-color: #333;
     transition: background-color 0.5s;
     color: white;
@@ -157,6 +157,11 @@
   .Profile-LeftNav-btns button:hover {
     background-color: #222;
     cursor: pointer;
+  }
+  .Profile-LeftNav-btns a
+  {
+    text-align: center;
+    text-decoration: none;
   }
   .Profile-LeftNav-Img {
     width: 100%;

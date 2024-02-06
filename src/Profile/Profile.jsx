@@ -201,13 +201,13 @@ const Profile=()=>
                 <div className="Profile-LeftNav-3">
                     <div className="Profile-LeftNav-CashDetails">
                         <p><ProfileCash width='20px' height='20px'/>Total Earned &#x20B9;{TotalAmount.current}</p>
-                        <p><ZCoinsIcon width='20px' height='20px'/>Z-Points</p>
+                        <p><ZCoinsIcon width='20px' height='20px'/>Z-Points(Download App)</p>
                     </div>
                 </div>
                 
                 <div className="Profile-LeftNav-4">
                     <div className="Profile-LeftNav-btns">
-                        <button>Become a Host</button>
+                        <a href='https://driveeasyuser.netlify.app' target='_blank'>Book a rental</a>
                         <button onClick={Logout}>Logout</button>
                     </div>
                 </div>

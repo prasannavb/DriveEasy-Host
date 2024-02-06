@@ -22,14 +22,14 @@ import Loading from '../Loading/Loading'
 const AddCar=()=>
 {
     const user=useSelector((state)=>state.user)
-    const[formdetails,Setform]=useState({sid:`${user.sid}`,car_no:'',img:'',name:'',year:'',fuel:'',make:'',model:'',type:'',price:'',location:''})
+    const[formdetails,Setform]=useState({sid:`${user.sid}`,car_no:'',img:'',name:'',year:'',fuel:'',make:'',model:'',type:'',price:'',location:'',desc:''})
     const[loading,Setloading]=useState(true)
     const [Ack,SetAck]=useState(false)
     const [Fuel,SetFuel]=useState([])
     const [Make,SetMake]=useState([])
     const [Model,SetModel]=useState([])
     const [Type,SetType]=useState([])
-    const [Errmsg,SetErr]=useState({car_no:'',img:'',name:'',year:'',fuel:'',make:'',model:'',type:'',price:'',location:'',rcbook:'',Insurance:'',selectedFiles:''})
+    const [Errmsg,SetErr]=useState({car_no:'',img:'',name:'',year:'',fuel:'',make:'',model:'',type:'',price:'',location:'',rcbook:'',Insurance:'',selectedFiles:'',desc:''})
     const [Minyear,SetMinYear]=useState()
     const [selectedFiles, setSelectedFiles] = useState([]);
     const RcbookRef=useRef('')
@@ -211,6 +211,17 @@ const AddCar=()=>
         else
         {
             SetErr((prev)=>{return({...prev,rcbook:""})})
+            SetAck(false)
+        }
+
+        if(formdetails.desc===null || formdetails.desc==='')
+        {
+            SetErr((prev)=>{return({...prev,desc:"Describe your vehicle"})})
+            SetAck(true)
+        }
+        else
+        {
+            SetErr((prev)=>{return({...prev,desc:''})})
             SetAck(false)
         }
 
@@ -467,7 +478,9 @@ function generateRandomName() {
                     <div className="AddLicense-Layout">
                         <div className="AddLicense-div-1">
                             <h1>Car Images</h1>
-                            <div className="AddLicense-PrimaryImg">
+                                
+                                <div className="AddLicense-Container-1">
+                                <div className="AddLicense-PrimaryImg">
                                 <b>Primary Image of car:</b>
                                 <div>
                                 <input type="file" id="actual-btn" name="car" onChange={ConvertImage} hidden/>
@@ -477,6 +490,15 @@ function generateRandomName() {
                             {Ack?(<span className="AddLicense-Err">{Errmsg.img}</span>):(<span className="AddLicense-Err">{Errmsg.img}</span>)}
 
                             </div>
+                            <div className="AddLicense-TextDesc">
+                                <b>Describe your vehicle:</b>
+                                <div>
+                                    <textarea name="desc" onChange={CarDetails}  cols="30" rows="10"></textarea>
+                                </div>
+                                {Ack?(<span className="AddLicense-Err">{Errmsg.desc}</span>):(<span className="AddLicense-Err">{Errmsg.desc}</span>)}
+
+                            </div>
+                                </div>
 
                                 <div className="AddLicense-SecondaryImg">
                                     <b>Add other images:</b>

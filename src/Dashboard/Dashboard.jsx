@@ -6,13 +6,14 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
+import { PDFDownloadLink } from '@react-pdf/renderer'
 
 //Modules
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import Loading from '../Loading/Loading'
 import GraphCount from '../GraphCount'
+import Pdf from '../PDF/Pdf'
 
 
 //Antd-Framework
@@ -22,6 +23,9 @@ import { Empty } from 'antd';
 //Chart
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto'; 
+
+//Images
+import Logo from '../Images/Logo.png'
 
 
 const Dashboard=()=>
@@ -152,7 +156,10 @@ const data = {
               <h3>Booking List</h3>
             </div>
             <div className='Dashboard-Table-board-btns'>
-                <button><DownloadOutlined style={{marginRight:'2%',fontSize:'18px'}} /> Download</button>
+    <PDFDownloadLink document={<Pdf BookingList={BookingList} Logo={Logo}/>} fileName='Bookings'>
+    <button><DownloadOutlined style={{marginRight:'2%',fontSize:'18px'}} /> Download</button>
+</PDFDownloadLink>
+
             </div>
           </div>
           <div className="Dashboard-Table-headings">

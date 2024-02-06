@@ -9,6 +9,10 @@ import auth from "./config/firebase";
 //Slice
 import { SignInDetails, SignOutDetails } from "./Slice/userSlice";
 
+//Modules
+import Loading from './Loading/Loading'
+
+
 const Container=({ children })=> {
     const [loading, setLoading] = useState(true);
     const dispatch =useDispatch()
@@ -43,7 +47,7 @@ const Container=({ children })=> {
 
     if (loading) {
         return (
-            <h2>Loading</h2>
+            <Loading/>
             )
     }
 

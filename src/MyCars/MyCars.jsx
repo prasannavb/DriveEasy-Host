@@ -12,13 +12,17 @@ import Loading from "../Loading/Loading";
 
 //CSS
 import './MyCars.css'
-
+ 
 //Antd-Framework
 import {EnvironmentOutlined,CarOutlined,CalendarFilled,StarFilled,LeftOutlined} from '@ant-design/icons'
 import { Empty ,Modal ,ConfigProvider,notification,Avatar,Rate} from "antd";
 
 //CustomSVGIcons
 import { FuelIcon,GearIcon } from "../SVGIcons/SvgComponent";
+
+//Firebase
+import {storage1} from '../UserConfig/firebase'
+import { ref,listAll ,deleteObject} from "firebase/storage";
 
 const MyCars=()=>
 {
@@ -107,23 +111,56 @@ const MyCars=()=>
         }
     }
 
-    const Delete=async()=>
-    {
-        const {data} = await axios.delete("https://drive-easy-host-server.vercel.app/DeleteCarDetail", {
-            data: { car_no: singlecar.car_no }
-          });       
-          if(data.action)
-          {
-            openNotification(data.status)
-            getCarDetails(user.sid)
-          }
-          else
-          {
-            openNotification(data.status)
-          }
-          Setdelete(false)
-
+    async function deleteFolderContents(folderRef) {
+        try {
+            const folderRes = await listAll(folderRef);
+            folderRes.items.forEach((itemRef) => {
+                deleteObject(itemRef).then(() => {
+                }).catch((error) => {
+                    console.error('Error deleting item:', itemRef.fullPath, error);
+                });
+            });
+            folderRes.prefixes.forEach((prefixRef) => {
+                deleteFolderContents(prefixRef);
+            });
+        } catch (error) {
+            console.error("Error deleting folder contents:", error);
+        }
     }
+    const Delete = async () => {
+            const {data} = await axios.delete("https://drive-easy-host-server.vercel.app/DeleteCarDetail", {
+                        data: { car_no: singlecar.car_no }
+                      });       
+            if(data.action)
+            {
+                const folderRef = ref(storage1,`/CarImages/${user.sid}/${singlecar.car_no}`);
+
+                    listAll(folderRef)
+                    .then((res) => {
+                      res.items.forEach((itemRef) => {
+                        deleteObject(itemRef).then(() => {
+                          }).catch((error) => {
+                            console.error('Error deleting item:', itemRef.fullPath, error);
+                          });
+                      });
+                      res.prefixes.forEach((prefixRef) => {
+                    deleteFolderContents(prefixRef);
+                });
+                })
+                .catch((error) => {
+                console.error('Error listing items:', error);
+                });
+                openNotification(data.status)
+                getCarDetails(user.sid)
+            }
+            else
+            {
+              openNotification(data.status)
+            }
+        Setdelete(false);
+             }
+    
+    
 
     const VerifiedCars=async(sid)=>
     {

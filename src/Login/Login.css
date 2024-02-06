@@ -94,6 +94,8 @@
     margin-left: 1%;
     font-weight: bold;
     text-decoration: none;
+    color: #551a8b;
+
   }
   .Login-Form-SignUp:hover {
     text-decoration: underline;

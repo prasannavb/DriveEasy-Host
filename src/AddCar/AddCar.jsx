@@ -315,10 +315,10 @@ function generateRandomName() {
       const ImagesUploadToFirebase = async () => {
 
         const insuranceRef=ref(  storage1,
-            `/CarImages/${user.sid}/${formdetails.car_no}/Insurance/`)
+            `/CarImages/${user.sid}/${formdetails.car_no}/Insurance.jpg/`)
             
         const rcbookRef=ref(  storage1,
-            `/CarImages/${user.sid}/${formdetails.car_no}/RCBook/`)
+            `/CarImages/${user.sid}/${formdetails.car_no}/RCBook.jpg/`)
 
                 await uploadBytes(insuranceRef, InsuranceRef.current);
                 await uploadBytes(rcbookRef, RcbookRef.current);

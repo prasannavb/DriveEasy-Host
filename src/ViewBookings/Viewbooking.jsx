@@ -20,6 +20,9 @@ import { Empty,Modal,notification,ConfigProvider  } from "antd";
 //CustomSVGIcons
 import { FuelIcon,GearIcon } from "../SVGIcons/SvgComponent";
 
+//Images
+import ViewBookingImg from '../Images/ViewBookingImg.jpg'
+
 const ViewBooking=()=>
 {
     const user=useSelector((state)=>state.user)
@@ -129,7 +132,7 @@ const ViewBooking=()=>
                        
         <Modal centered  open={CancelCar} okText="Cancel the trip" cancelText="Back to Safety" onOk={CancelTrip} onCancel={()=>{SetCancelCar(false)}} okButtonProps={{style: {color: 'white',backgroundColor: '#E74C3C',},}}  cancelButtonProps={{style: { color: 'white', backgroundColor: '#333', }, }}>
                 <div className="ViewBookings-CancelModal">
-                    <img src="src\Images\ViewBooking.jpg" alt="BackToSafety" />
+                    <img src={ViewBookingImg} alt="BackToSafety" />
                     <h2>Are you sure you're ready?</h2>
                     <p>Repeated cancellations may result in a loss of trust from our customers and could discourage future bookings.</p>
                 </div>

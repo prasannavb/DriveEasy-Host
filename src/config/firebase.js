@@ -1,18 +1,22 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
+import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
+
+// Use the environment variables to configure Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBKtbRDK1iEWcHBTQBCqP3UmVEADmUeLkc",
-  authDomain: "car-rental-seller-f4210.firebaseapp.com",
-  projectId: "car-rental-seller-f4210",
-  storageBucket: "car-rental-seller-f4210.appspot.com",
-  messagingSenderId: "473620828003",
-  appId: "1:473620828003:web:58939c96a5e3ab77094d56",
-  measurementId: "G-92VKQREMPV"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
-export const storage=getStorage(app)
-const auth=getAuth(app)
+
+// Initialize Firebase Storage and Authentication
+export const storage = getStorage(app);
+const auth = getAuth(app);
 
 export default auth;
